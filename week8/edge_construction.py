@@ -284,7 +284,8 @@ def run_week8_pipeline(
 
     entity_sentences: list[tuple[str, list[str]]] = []
     all_entity_strings: list[str] = []
-
+    raw_texts: list[str] = []
+    
     if Path(entities_path).exists():
         with open(entities_path, encoding="utf-8") as f:
             canonical_data = json.load(f)
